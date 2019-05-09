@@ -3,17 +3,37 @@
 <head>
 	<title>Edit Notes</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 	<link href='style.css' type='text/css' rel='stylesheet'>
 </head>
 <body>
 	<center>
+		<br>
 		<h1>Edit Notes</h1>
-		<input id='title-input'> <button id='enter-title'>Enter Note Title</button><br><br>
+		<br>
+		<div class="input-group mb-3">
+  			<input type="text" class="form-control" placeholder="Add Note Title" aria-label="Recipient's username" aria-describedby="button-addon2" id='title-input'>
+ 		 	<div class="input-group-append">
+    			<button class="btn btn-outline-secondary enter-title-edit" type="button" id="button-addon2">Enter Note Title</button>
+  			</div>
+		</div>
 		<textarea id='text-input' placeholder =''></textarea><br><br>
 
-		<button id='enter-note'>Enter Note</button> <button id='remove-note'>Remove Note</button>
+		<button type="button" class="btn btn-outline-secondary home-button" id='enter-note'>Save Note</button>
+
+		<button type="button" class="btn btn-outline-secondary home-button" id='remove-note'>Remove Note</button>
 		<br><br>
-		<a href='index.html'>Go Back</a>
+		<button type="button" class="btn btn-outline-secondary home-button">Back Home</button>
+
+
+
+
+
+
+
+
+
+
 
 
 

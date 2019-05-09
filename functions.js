@@ -10,7 +10,6 @@ const add_to_storage = ()=>{
 	localStorage.setItem('notes', x);
 }
 
-
 const display_array = ()=>{
 	notes.forEach((a)=>{
 		const x = document.createElement('a');

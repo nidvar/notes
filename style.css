@@ -23,6 +23,7 @@ textarea{
 	min-width:400px;
 	min-height:200px;
 	border-radius:10px;
+	padding:5px 10px 10px 10px;
 }
 .input-group{
 	max-width:400px;
