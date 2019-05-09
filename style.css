@@ -6,6 +6,14 @@ nav{
 	background-color:black;
 	height:50px;
 }
+#logo{
+	color:white;
+	margin:0 0 0 10px;
+	padding:16px;
+	font-weight:lighter;
+	font-size:16px;
+	letter-spacing: 1px;
+}
 .note-title{
 	margin:10px;
 	display:block;
