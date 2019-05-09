@@ -39,3 +39,6 @@ textarea{
 	max-width:400px;
 	margin:auto;
 }
+a:hover{
+	text-decoration:none;
+}
