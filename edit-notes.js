@@ -12,6 +12,11 @@ document.querySelector('.enter-title-edit').addEventListener('click', ()=>{
 		add_to_storage();
 })
 
+document.getElementById('text-input').addEventListener('input', ()=>{
+		x.text = document.getElementById('text-input').value;
+		add_to_storage();
+})
+
 document.getElementById('enter-note').addEventListener('click', ()=>{
 		x.text = document.getElementById('text-input').value;
 		add_to_storage();
@@ -29,8 +34,23 @@ document.getElementById('remove-note').addEventListener('click', ()=>{
 	location.assign(`index.html`)
 })
 
-for(i=0; i<=3; i++){
+for(i=0; i<=2; i++){
 	document.querySelectorAll('.home-button')[i].addEventListener('click', ()=>{
 		location.assign('index.html')
 	})
 }
+
+window.addEventListener('storage', (e)=>{
+	if(e.key === 'notes'){
+
+		const z = notes.find((a)=>{
+			return a.id === parseFloat(location.hash.substring(1))
+		})
+		document.getElementById('title-input').value = z.title
+		document.getElementById('text-input').value = z.text
+
+		console.log(z.text);
+		console.log(z);
+
+	}
+})
