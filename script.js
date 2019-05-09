@@ -4,7 +4,7 @@ document.querySelector('.enter-title').addEventListener('click', ()=>{
 		const random = Math.random()*Math.random();
 		notes.push({
 			title: document.getElementById('user-input').value,
-			text: 'empty',
+			text: '',
 			id: random
 		})
 		document.getElementById('user-input').value = '';
