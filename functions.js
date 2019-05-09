@@ -15,7 +15,7 @@ const display_array = ()=>{
 	notes.forEach((a)=>{
 		const x = document.createElement('a');
 		x.setAttribute('href', `edit.html#${a.id}`)
-		x.style = 'display:block'
+		x.setAttribute('class', `note-title`)
 		x.textContent = a.title
 		document.getElementById('display').appendChild(x);
 	})

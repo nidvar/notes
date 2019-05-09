@@ -1,3 +1,30 @@
 html, body{
 	margin:0;
+	font-family: 'Raleway', sans-serif;
+}
+.note-title{
+	margin:10px;
+	display:block;
+}
+a {
+	text-decoration: none;
+	color:black;
+	border:1px solid grey;
+	max-width:300px;
+	padding:10px;
+	border-radius:10px;
+}
+a:hover{
+	background-color:#6c757d;
+	text-decoration: none;
+	color:white;
+}
+textarea{
+	min-width:400px;
+	min-height:200px;
+	border-radius:10px;
+}
+.input-group{
+	max-width:400px;
+	margin:auto;
 }
