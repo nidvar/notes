@@ -1,16 +1,6 @@
 const create_date = ()=>{
 	const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 	const x = new Date();
-	const y = ()=>{
-		if(x.getHours() > 12){
-			return (x.getHours()-12);
-		}
-		if(x.getHours() < 10){
-			return '0'+x.getHours();
-		}else{
-			return x.getHours();
-		}
-	}
 	const z = ()=>{
 		if(x.getMinutes() < 10){
 			return '0'+x.getMinutes();
@@ -19,9 +9,9 @@ const create_date = ()=>{
 		}
 	}
 	if(x.getHours() > 12){
-		return x.getDate() +'-'+ months[x.getMonth()] + '-' + (x.getFullYear())+', '+ y() +':'+ z() +'pm'
+		return x.getDate() +'-'+ months[x.getMonth()] + '-' + (x.getFullYear())+', '+ (x.getHours()-12) +':'+ z() +'pm'
 	}else{
-		return x.getDate() +'-'+ months[x.getMonth()] + '-' + (x.getFullYear())+', '+ y() +':'+ z() +'am'
+		return x.getDate() +'-'+ months[x.getMonth()] + '-' + (x.getFullYear())+', '+ x.getHours() +':'+ z() +'am'
 	}
 }
 
