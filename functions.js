@@ -28,7 +28,7 @@ const display_array = (any_array)=>{
 		document.getElementById('display').appendChild(x);
 
 		const y = document.createElement('span');
-		y.style = 'float:right; font-size:12px; margin-top:13px; color:red;'
+		y.style = 'float:right; font-size:12px; margin-top:13px; color:blue;'
 		y.textContent = a.time;
 		x.appendChild(y);
 	})
