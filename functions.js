@@ -3,7 +3,7 @@ const create_date = ()=>{
 	const x = new Date();
 	const y = x.getHours()
 	
-	return x.getDate() +'-'+ months[x.getMonth()] + '-' + (x.getFullYear() - 2000)+', '+ x.getHours() +':'+ x.getMinutes()
+	return x.getDate() +'-'+ months[x.getMonth()] + '-' + (x.getFullYear())+', '+ x.getHours() +':'+ x.getMinutes()
 }
 
 const start = ()=>{ 
@@ -28,7 +28,7 @@ const display_array = (any_array)=>{
 		document.getElementById('display').appendChild(x);
 
 		const y = document.createElement('span');
-		y.style = 'float:right; font-size:12px; margin-top:13px; color:blue;'
+		y.setAttribute('class', 'note-date')
 		y.textContent = a.time;
 		x.appendChild(y);
 	})
