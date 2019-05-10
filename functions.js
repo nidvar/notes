@@ -29,16 +29,23 @@ const add_to_storage = ()=>{
 
 const display_array = (any_array)=>{
 	any_array.forEach((a)=>{
-		const x = document.createElement('a');
-		x.setAttribute('href', `edit.html#${a.id}`)
-		x.setAttribute('class', `note-title`)
+
+		const x = document.createElement('div');
+		x.setAttribute('class', `note-title`);
 		x.setAttribute('id', `${a.id}`)
-		x.textContent = a.title
+		x.addEventListener('click',()=>{
+			location.assign(`edit.html#${a.id}`)
+		})
 		document.getElementById('display').appendChild(x);
 
-		const y = document.createElement('span');
+		const z = document.createElement('a');
+		z.setAttribute('href', `edit.html#${a.id}`);
+		z.textContent = a.title;
+		x.appendChild(z);
+
+		const y = document.createElement('p');
 		y.setAttribute('class', 'note-date')
-		y.textContent = a.time;
+		y.textContent = `updated at: ${a.time_updated}`;
 		x.appendChild(y);
 	})
 }
@@ -49,7 +56,8 @@ const add_note_title = ()=>{
 			title: document.getElementById('user-input').value,
 			text: '',
 			id: random,
-			time: create_date()
+			time_created: create_date(),
+			time_updated: create_date(),
 		})
 		document.getElementById('user-input').value = '';
 		add_to_storage();

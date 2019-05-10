@@ -4,24 +4,25 @@ const x = notes.find((a)=>{
 })
 document.getElementById('title-input').value = x.title
 document.getElementById('text-input').value = x.text
+document.querySelector('.time-created-note').innerHTML = `Note created at: ${x.time_created}`
 document.querySelector('.enter-title-edit').addEventListener('click', ()=>{
 		x.title = document.getElementById('title-input').value;
-		x.time = create_date();
+		x.time_updated = create_date();
 		add_to_storage();
 })
 document.getElementById('title-input').addEventListener('input', ()=>{
 		x.title = document.getElementById('title-input').value;
-		x.time = create_date();
+		x.time_updated = create_date();
 		add_to_storage();
 })
 document.getElementById('text-input').addEventListener('input', ()=>{
 		x.text = document.getElementById('text-input').value;
-		x.time = create_date();
+		x.time_updated = create_date();
 		add_to_storage();
 })
 document.getElementById('enter-note').addEventListener('click', ()=>{
 		x.text = document.getElementById('text-input').value;
-		x.time = create_date();
+		x.time_updated = create_date();
 		add_to_storage();
 })
 document.getElementById('remove-note').addEventListener('click', ()=>{

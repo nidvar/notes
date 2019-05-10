@@ -20,24 +20,29 @@ nav{
 	text-decoration: none;
 	color:black;
 	border:.5px solid lightgrey;
-	max-width:350px;
+	max-width:450px;
 	padding:10px;
 	border-radius:3px;
 	text-align:left;
-	padding:20px;
+	padding-left:15px;
 }
 .note-title:hover{
 	background-color:orange;
 	border:1px solid orange;
 	text-decoration: none;
 	color:white;
+	cursor: pointer;
 }
 .note-date{
-	float:right; 
-	font-size:12px; 
-	margin-top:13px; 
+	text-align:right;
+	font-size:11px; 
+	letter-spacing: 1px;
+	margin:10px 0 0 0;
 }
 .note-title:hover .note-date{
+	color:white;
+}
+.note-title:hover a{
 	color:white;
 }
 textarea{
@@ -52,9 +57,21 @@ textarea{
 }
 a:hover{
 	text-decoration:none;
-	color:orange;
+	color:white;
+}
+a{
+	color:black;
 }
 #button-addon2:hover, #enter-note:hover, #remove-note:hover{
 	background-color:orange;
 	border:1px solid orange;
+}
+.day-day{
+	max-width:400px;
+	margin:auto;
+}
+.time-created-note{
+	text-align:right;
+	font-size:12px;
+	letter-spacing: 1px;
 }
