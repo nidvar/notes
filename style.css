@@ -79,3 +79,7 @@ a{
 	border-radius:2px;
 	border:1px solid lightgrey;
 }
+#remove-note:hover{
+	background-color:red;
+	border:1px solid red;
+}

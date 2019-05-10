@@ -29,6 +29,9 @@ document.getElementById('enter-note').addEventListener('click', ()=>{
 		x.time_updated_in_seconds = Date.now()
 		add_to_storage();
 })
+document.getElementById('back').addEventListener('click', ()=>{
+		location.assign('index.html')
+})
 document.getElementById('remove-note').addEventListener('click', ()=>{
 	console.log(notes);
 	const x = notes.findIndex((a)=>{
