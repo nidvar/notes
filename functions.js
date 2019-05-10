@@ -58,9 +58,49 @@ const add_note_title = ()=>{
 			id: random,
 			time_created: create_date(),
 			time_updated: create_date(),
+			time_created_in_seconds:Date.now(),
+			time_updated_in_seconds:Date.now(),
 		})
 		document.getElementById('user-input').value = '';
 		add_to_storage();
 		display_array(notes);
 		location.assign(`edit.html#${random}`)
+}
+
+const filtering_by_alphabetical_order = ()=>{
+	const x = notes.sort((a,b)=>{
+		if(a.title.toLowerCase() < b.title.toLowerCase()){
+			return -1
+		}else if(a.title.toLowerCase() > b.title.toLowerCase()){
+			return 1
+		}else{
+			return 0
+		}
+	})
+	display_array(x);
+}
+
+const filtering_by_first_created = ()=>{
+	const x = notes.sort((a,b)=>{
+		if(a.time_created_in_seconds < b.time_created_in_seconds){
+			return -1
+		}else if(a.time_created_in_seconds > b.time_created_in_seconds){
+			return 1
+		}else{
+			return 0
+		}
+	})
+	display_array(x);
+}
+const filtering_by_last_updated = ()=>{
+	const x = notes.sort((a,b)=>{
+		if(a.time_updated_in_seconds < b.time_updated_in_seconds){
+			return 1
+		}else if(a.time_updated_in_seconds > b.time_updated_in_seconds){
+			return -1
+		}else{
+			return 0
+		}
+	})
+	display_array(x);
 }

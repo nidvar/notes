@@ -8,21 +8,25 @@ document.querySelector('.time-created-note').innerHTML = `Note created at: ${x.t
 document.querySelector('.enter-title-edit').addEventListener('click', ()=>{
 		x.title = document.getElementById('title-input').value;
 		x.time_updated = create_date();
+		x.time_updated_in_seconds = Date.now()
 		add_to_storage();
 })
 document.getElementById('title-input').addEventListener('input', ()=>{
 		x.title = document.getElementById('title-input').value;
 		x.time_updated = create_date();
+		x.time_updated_in_seconds = Date.now()
 		add_to_storage();
 })
 document.getElementById('text-input').addEventListener('input', ()=>{
 		x.text = document.getElementById('text-input').value;
 		x.time_updated = create_date();
+		x.time_updated_in_seconds = Date.now()
 		add_to_storage();
 })
 document.getElementById('enter-note').addEventListener('click', ()=>{
 		x.text = document.getElementById('text-input').value;
 		x.time_updated = create_date();
+		x.time_updated_in_seconds = Date.now()
 		add_to_storage();
 })
 document.getElementById('remove-note').addEventListener('click', ()=>{

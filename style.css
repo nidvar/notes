@@ -75,3 +75,7 @@ a{
 	font-size:12px;
 	letter-spacing: 1px;
 }
+#mySelect{
+	border-radius:2px;
+	border:1px solid lightgrey;
+}

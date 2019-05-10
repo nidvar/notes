@@ -19,4 +19,20 @@ window.addEventListener('storage', (e)=>{
 	}
 })
 
+document.getElementById('mySelect').addEventListener('input',()=>{
+	if(document.getElementById('mySelect').selectedIndex === 0){
+		console.log('just added');
+		document.getElementById('display').innerHTML = '';
+		filtering_by_first_created();
+	}else if(document.getElementById('mySelect').selectedIndex === 1){
+		console.log('just updated');
+		document.getElementById('display').innerHTML = '';
+		filtering_by_last_updated();
+	}else{
+		console.log('alphabetical');
+		document.getElementById('display').innerHTML = '';
+		filtering_by_alphabetical_order();
+	}
+})
+
 display_array(notes);
